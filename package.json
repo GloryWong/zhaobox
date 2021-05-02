@@ -1,0 +1,25 @@
+{
+  "name": "@zhaobox/cli",
+  "version": "1.0.0",
+  "description": "CLI",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "zhaobox": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Glory Wong",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0",
+    "copy-dir": "^1.3.0",
+    "execa": "^5.0.0",
+    "inquirer": "^8.0.0",
+    "listr": "^0.14.3",
+    "pkg-install": "^1.0.0"
+  }
+}

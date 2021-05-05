@@ -1,4 +1,5 @@
 import chalk from 'chalk';
+import { isPlainObject } from 'is-plain-object';
 
 let colorMap = {
   'info': 'white',
@@ -22,7 +23,7 @@ function log(...params) {
       type = v.slice(0, v.length - 1);
       return;
     }
-    content.push(v);
+    content.push(isPlainObject(v) ? JSON.stringify(v, null, 2) : v);
   });
 
   if (content.length) {

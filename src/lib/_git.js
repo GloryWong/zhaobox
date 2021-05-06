@@ -1,6 +1,7 @@
 import { ZHAOBOX_PATH } from '../constant/index.js';
 import Ora from 'ora';
 import fs from 'fs';
+import path from 'path';
 import execa from 'execa';
 import { readLibConfig } from '../util/base.js';
 
@@ -34,9 +35,9 @@ function initGit() {
       });
     }
 
-    execa.sync('git', ['branch', '-M', 'master'], {
-      cwd: ZHAOBOX_PATH
-    });
+    // execa.sync('git', ['branch', '-M', 'master'], {
+    //   cwd: ZHAOBOX_PATH
+    // });
 
     ora.succeed('Init Git project in ZhaoBox success.');
   } catch (error) {

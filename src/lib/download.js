@@ -15,6 +15,9 @@ program
 function download() {
   const ora = Ora('Pull from remote repository.').start();
   try {
+    execa.sync('git', ['add', '*'], {
+      cwd: ZHAOBOX_PATH
+    });
     execa.sync('git', ['pull', 'origin', 'master'], {
       cwd: ZHAOBOX_PATH
     });

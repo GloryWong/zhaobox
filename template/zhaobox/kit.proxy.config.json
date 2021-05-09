@@ -1,0 +1,15 @@
+{
+  "proxyServer": {
+    "http": "http://localhost:51837",
+    "https": ":http",
+    "socks": ":http"
+  },
+  "apps": [
+    {
+      "name": "git",
+      "get": ["git", ["config", "--global", "http.proxy"]],
+      "set": "git config --global http.proxy=${http}",
+      "unset": "git config --global --unset http.proxy"
+    }
+  ]
+}

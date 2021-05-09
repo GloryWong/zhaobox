@@ -23,7 +23,7 @@ function log(...params) {
       type = v.slice(0, v.length - 1);
       return;
     }
-    content.push(isPlainObject(v) ? JSON.stringify(v, null, 2) : v);
+    content.push((isPlainObject(v) || Array.isArray(v)) ? JSON.stringify(v, null, 2) : v);
   });
 
   if (content.length) {

@@ -11,5 +11,6 @@ export default function exec() {
     .version(VERSION, '-v, --version', 'output the current version')
     .command('init', 'init ZhaoBox.', { executableFile: path.join(SUB_COMMAND_PATH, 'init.js')})
     .command('lib', 'manage lib.', { executableFile: path.join(SUB_COMMAND_PATH, 'lib.js')})
+    .command('kit', 'tool kit', { executableFile: path.join(SUB_COMMAND_PATH, 'kit.js')})
     .parse();
 }

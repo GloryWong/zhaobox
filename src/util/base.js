@@ -1,7 +1,7 @@
 import path from 'path';
 import log from './log.js';
 import os from './os.js';
-import { LIB_CONFIG_PATH } from '../constant/index.js';
+import { LIB_CONFIG_PATH, KIT_PROXY_CONFIG_PATH } from '../constant/index.js';
 import jsonfile from 'jsonfile';
 
 function filename(imporMeta) {
@@ -10,6 +10,14 @@ function filename(imporMeta) {
 
 function dirname(importMeta) {
   return path.dirname(filename(importMeta));
+}
+
+function readKitProxyConfig() {
+  try {
+    return jsonfile.readFileSync(KIT_PROXY_CONFIG_PATH);
+  } catch (error) {
+    throw ('Read kit-proxy-config failed', error);
+  }
 }
 
 function readLibConfig() {
@@ -41,5 +49,6 @@ export {
   readLibConfig,
   writeLibConfig,
   log,
-  os
+  os,
+  readKitProxyConfig
 }

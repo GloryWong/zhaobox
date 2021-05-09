@@ -1,7 +1,8 @@
 import { Command } from 'commander/esm.mjs';
 import fs from 'fs-extra';
 import path from 'path';
-import { log, dirname } from './util/base.js';
+import { dirname } from './util/base.js';
+import log from '@glorywong/log';
 import { RC_FILE_PATH, ZHAOBOX_PATH } from './constant/index.js';
 import execa from 'execa';
 import { execSync, spawn, spawnSync } from 'child_process';

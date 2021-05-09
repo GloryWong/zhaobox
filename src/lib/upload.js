@@ -1,7 +1,4 @@
 import { Command } from 'commander/esm.mjs';
-import fs from 'fs-extra';
-import path from 'path';
-import { dirname, log } from '../util/base.js';
 import { ZHAOBOX_PATH } from '../constant/index.js';
 import Ora from 'ora';
 import execa from 'execa';

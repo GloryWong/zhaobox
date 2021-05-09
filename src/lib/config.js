@@ -2,7 +2,8 @@ import { Command } from 'commander/esm.mjs';
 import { ZHAOBOX_PATH } from '../constant/index.js';
 import Ora from 'ora';
 import execa from 'execa';
-import { readLibConfig, writeLibConfig, log } from '../util/base.js';
+import { readLibConfig, writeLibConfig } from '../util/base.js';
+import log from '@glorywong/log';
 
 const program = new Command();
 program

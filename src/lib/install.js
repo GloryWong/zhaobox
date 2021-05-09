@@ -1,10 +1,11 @@
 import { Command } from 'commander/esm.mjs';
 import fs from 'fs-extra';
 import path, { resolve } from 'path';
-import { dirname, log, os } from '../util/base.js';
+import { dirname, os } from '../util/base.js';
 import { ZHAOBOX_PATH } from '../constant/index.js';
 import Ora from 'ora';
 import execa from 'execa';
+import log from '@glorywong/log';
 
 const program = new Command();
 program

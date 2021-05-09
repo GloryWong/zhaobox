@@ -1,6 +1,6 @@
 import { Command } from 'commander';
 import path from 'path';
-import { dirname, log } from './util/base.js';
+import { dirname } from './util/base.js';
 
 const SUB_COMMAND_PATH = dirname(import.meta);
 const VERSION = '1.0.0';

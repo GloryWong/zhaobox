@@ -1,6 +1,4 @@
 import path from 'path';
-import log from './log.js';
-import os from './os.js';
 import { LIB_CONFIG_PATH, KIT_PROXY_CONFIG_PATH } from '../constant/index.js';
 import jsonfile from 'jsonfile';
 
@@ -48,7 +46,5 @@ export {
   dirname,
   readLibConfig,
   writeLibConfig,
-  log,
-  os,
   readKitProxyConfig
 }

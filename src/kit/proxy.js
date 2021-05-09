@@ -1,6 +1,7 @@
 import { Command } from 'commander/esm.mjs';
 import path from 'path';
-import { log, readKitProxyConfig } from '../util/base.js';
+import { readKitProxyConfig } from '../util/base.js';
+import log from '@glorywong/log';
 import Ora from 'ora';
 import execa from 'execa';
 
